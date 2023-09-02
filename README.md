@@ -1,8 +1,10 @@
 ## 介绍
 
-基于 [LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) 搭建使用 LLM [internlm/internlm-chat-7b-v1_1](https://huggingface.co/internlm/internlm-chat-7b-v1_1) 的 Openmmlab 知识库问答。
+使用 [LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) 搭建基于 LLM [internlm/internlm-chat-7b-v1_1](https://huggingface.co/internlm/internlm-chat-7b-v1_1) 的 OpenMMLab 知识库问答。
 
 目前当前 Repo 支持 `mmdetection`，`mmyolo` 和 `mmengine`。
+
+ ![](img/openmmlab_chat.png)
 
 ## 模型支持
 
