@@ -32,14 +32,14 @@ if __name__ == "__main__":
         )
 
     pages = {
-        "对话": {
+        "Openmmlab 知识库问答": {
             "icon": "chat",
             "func": dialogue_page,
         },
-        "知识库管理": {
-            "icon": "hdd-stack",
-            "func": knowledge_base_page,
-        },
+        #"知识库管理": {
+        #    "icon": "hdd-stack",
+        #    "func": knowledge_base_page,
+        #},
     }
 
     with st.sidebar:

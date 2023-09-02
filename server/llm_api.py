@@ -11,7 +11,7 @@ from server.utils import MakeFastAPIOffline
 host_ip = "0.0.0.0"
 controller_port = 20001
 model_worker_port = 20002
-openai_api_port = 8888
+openai_api_port = 8123
 base_url = "http://127.0.0.1:{}"
 
 

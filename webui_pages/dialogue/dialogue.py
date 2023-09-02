@@ -51,10 +51,10 @@ def dialogue_page(api: ApiRequest):
             st.toast(text)
             # sac.alert(text, description="descp", type="success", closable=True, banner=True)
 
-        dialogue_mode = st.selectbox("请选择对话模式",
-                                     ["LLM 对话",
-                                      "知识库问答",
-                                      "搜索引擎问答",
+        dialogue_str = "Openmmlab 知识库问答"
+        dialogue_mode = st.selectbox("对话模式",
+                                     [
+                                      dialogue_str
                                       ],
                                      on_change=on_mode_change,
                                      key="dialogue_mode",
@@ -66,7 +66,7 @@ def dialogue_page(api: ApiRequest):
         def on_kb_change():
             st.toast(f"已加载知识库： {st.session_state.selected_kb}")
 
-        if dialogue_mode == "知识库问答":
+        if dialogue_mode == dialogue_str:
             with st.expander("知识库配置", True):
                 kb_list = api.list_knowledge_bases(no_remote_api=True)
                 selected_kb = st.selectbox(
@@ -109,7 +109,7 @@ def dialogue_page(api: ApiRequest):
                 text += t
                 chat_box.update_msg(text)
             chat_box.update_msg(text, streaming=False)  # 更新最终的字符串，去除光标
-        elif dialogue_mode == "知识库问答":
+        elif dialogue_mode == dialogue_str:
             history = get_messages_history(history_len)
             chat_box.ai_say([
                 f"正在查询知识库 `{selected_kb}` ...",
