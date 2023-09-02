@@ -51,7 +51,7 @@ def dialogue_page(api: ApiRequest):
             st.toast(text)
             # sac.alert(text, description="descp", type="success", closable=True, banner=True)
 
-        dialogue_str = "Openmmlab 知识库问答"
+        dialogue_str = "OpenMMLab 知识库问答"
         dialogue_mode = st.selectbox("对话模式",
                                      [
                                       dialogue_str

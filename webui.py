@@ -15,22 +15,22 @@ api = ApiRequest(base_url="http://127.0.0.1:7861", no_remote_api=False)
 
 if __name__ == "__main__":
     st.set_page_config(
-        "Openmmlab 知识库问答",
+        "OpenMMLab 知识库问答",
         os.path.join("img", "openmmlab_logo.png"),
         initial_sidebar_state="expanded",
         menu_items={
-            'About': f"""欢迎使用 Openmmlab 知识库问答！"""
+            'About': f"""欢迎使用 OpenMMLab 知识库问答！"""
         }
     )
 
     if not chat_box.chat_inited:
         st.toast(
-            f"欢迎使用 Openmmlab 知识库问答! \n\n"
+            f"欢迎使用 OpenMMLab 知识库问答! \n\n"
             f"当前使用模型`{LLM_MODEL}`, 您可以开始提问了."
         )
 
     pages = {
-        "Openmmlab 知识库问答": {
+        "OpenMMLab 知识库问答": {
             "icon": "chat",
             "func": dialogue_page,
         },
